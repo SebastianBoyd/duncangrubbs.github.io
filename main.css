@@ -37,31 +37,6 @@ h3 {
   margin: 0 auto;
 
 }
-.nav {
-  margin-top: 20px;
-  height: 40px;
-
-}
-.nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-.nav ul li {
-  list-style: none;
-}
-
-.nav ul li a {
-  text-decoration: none;
-  float: left;
-  display: block;
-  padding: 10px 20px;
-  color: black;
-}
-
-.nav ul li a:hover {
-  color: white;
-}
 
 .drake a {
   padding: 10px 20px;
@@ -72,6 +47,3 @@ h3 {
 }
 
 
-#center_marker{
-  width:960px /*centering the webpage*/
-}
