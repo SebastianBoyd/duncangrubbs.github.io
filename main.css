@@ -1,24 +1,39 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext);
-
 body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 20px;
-  text-align: center;
-  background-color: white;
+  background-image: url("background.jpg");
 }
 
-p {
-  font-size: 16px;
+.text {
+  color: #484848;
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-h3 {
-  font-size: 20px;
+.text-essay {
+  color: #484848;
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.headerContent {
+.home-content {
+  margin-left: 60px;
+}
 
-  width: 1024px;
-  height: auto;
-  margin: 0 auto;
+.white-background {
+  border-radius: 4px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.button1 {
+  margin-left: 60px;
+}
+
+.emailForm {
+  padding-left: 15px;
 }
