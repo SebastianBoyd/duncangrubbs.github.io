@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="res/main.css">
 
     <title>Duncan Grubbs</title>
   </head>
@@ -48,63 +48,73 @@
 
       <main class="mdl-layout__content">
 
-        <div class="mdl-grid home-content">
+        <div class="row">
 
-          <div class="mdl-cell mdl-cell--6-col mdl-color--white mdl-shadow--4dp white-background">
+          <div class="col-md-6">
 
-            <h1 class="text">About Me</h1>
+            <div class="panel-group about-panel" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      About Me
+                    </a>
+                  </h4>
+                </div>
 
-            <div class="text">
-                <p>Hi, My name is Duncan Grubbs and I am an officer in the Drake Developers Club.
-                Currently I am working on improving our club website as well as the home access client.
-                I attend Sir Francis Drake High School in San Anselmo California. I am a junior this year
-                and <br> I am taking AP Computer Science as well as Physics and Chemistry. I love coding and web
-                development and I really enjoy being a part of this club.</p>
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="mdl-grid home-content">
-
-          <div class="mdl-cell mdl-cell--6-col mdl-color--white mdl-shadow--4dp white-background">
-
-            <h1 class="text">About the Club</a></h1>
-
-            <div class="text">
-                <p>The <a href="http://dhsdevelopers.org"><em>Drake Developers Club</em></a> was founded by <a href="http://dhsdevelopers.org/roster/Luke_Martel/index.html">Lucas Martel</a>, <a href="http://dhsdevelopers.org/roster/Jessica_Gerwin/index.html">Jessica Gerwin</a>, <a href="http://dhsdevelopers.org/roster/Zander_Otavka/index.html">Zander Otavka</a>, and myself last year. The mission of the club is
-                to teach people how to code as well as create innovative projects that involve coding.
-                We mainly focus on web design but have some projects in Python and Java. Each club member has thier own webpage that
-                is linked to the main webpage. This way each member can show off his/her skills with web design. Our club meets every
-                Wednesday in 127 (Mr. Milsteads room) for lunch. Feel free to join!</p>
-            </div>
-
-            <!-- Simple Textfield -->
-            <form action="#" class="emailForm">
-              <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" id="email" />
-                <label class="mdl-textfield__label" for="sample1">Email</label>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    Hi, My name is Duncan Grubbs and I am an officer in the Drake Developers Club.
+                    Currently I am working on improving our club website as well as the home access client.
+                    I attend Sir Francis Drake High School in San Anselmo California. I am a junior this year
+                    and I am taking AP Computer Science as well as Physics and Chemistry. I love coding and web
+                    development and I really enjoy being a part of this club.
+                  </div>
+                </div>
               </div>
 
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onClick="addEmail">
-              Join
-              </button>
-            </form>
+            </div>
+
+          </div>
+
+          </div>
+
+          <div class="row">
+
+          <div class="col-md-6">
+
+            <div class="panel-group about-panel" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collpaseTwo">
+                      About the Club
+                    </a>
+                  </h4>
+                </div>
+
+                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    The <a href="http://dhsdevelopers.org"><em>Drake Developers Club</em></a> was founded by
+                    <a href="http://dhsdevelopers.org/roster/Luke_Martel/index.html">Lucas Martel</a>,
+                    <a href="http://dhsdevelopers.org/roster/Jessica_Gerwin/index.html">Jessica Gerwin</a>,
+                    <a href="http://dhsdevelopers.org/roster/Zander_Otavka/index.html">Zander Otavka</a>, and
+                    myself last year. The mission of the club is to teach people how to code as well as create
+                    innovative projects that involve coding. We mainly focus on web design but have some projects
+                    in Python and Java. Each club member has thier own webpage that is linked to the main webpage.
+                    This way each member can show off his/her skills with web design. Our club meets every Wednesday
+                    in 127 (Mr. Milsteads room) for lunch. Feel free to join!
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
 
           </div>
 
         </div>
-
-        <!-- <footer class="footer" id="footer">
-
-          <div class="footer-text">
-
-            <h1>Duncan Grubbs</h1>
-            <h4>This website was created by <em>Duncan Grubbs</em> using
-            <a href="http://www.getmdl.io">MDL</a> and <a href="http://www.getbootstrap.com">Bootstrap</a></h4>
-
-        </footer> -->
 
       </main>
 
