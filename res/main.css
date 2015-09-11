@@ -31,6 +31,11 @@ body {
 
 .about-panel {
   margin-left: 25px;
+  margin-right: 25px;
+}
+
+.about-panel-top {
+  margin-top: 45px;
 }
 
 .join-button {
