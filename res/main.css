@@ -33,7 +33,11 @@ body {
   margin-left: 25px;
 }
 
-.button {
+.join-button {
   margin-left: 10px;
   margin-bottom: 7px;
+}
+
+.about-modal {
+  padding-top: 40px;
 }
