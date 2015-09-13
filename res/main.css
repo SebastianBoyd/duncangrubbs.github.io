@@ -46,3 +46,7 @@ body {
 .about-modal {
   padding-top: 40px;
 }
+
+@media screen and (max-width:959px){
+  width:100%;
+}
