@@ -47,6 +47,24 @@ body {
   padding-top: 40px;
 }
 
-@media screen and (max-width:959px){
-  width:100%;
+.mobile-content {
+  display: none;
+}
+
+@media screen and (max-width: 900px){
+  .home-content {
+    display: none;
+  }
+
+  .mobile-content{
+    display: block;
+    margin-top: 0;
+  }
+
+}
+
+@media screen and (max-width: 1024px){
+  #title {
+    display: none;
+  }
 }
