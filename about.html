@@ -4,124 +4,119 @@
 
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="res/main.css">
-
     <title>Duncan Grubbs</title>
+    <link rel="stylesheet" type="text/css" href="res/main.css">
+    <link rel="stylesheet" type="text/css" href="res/mobile.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="icon" href="res/favicon.ico">
+    <link rel="shortcut icon" href="res/favicon.ico">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
   </head>
 
   <body>
 
-    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    <div class="header">
+      <h1>Duncan Grubbs</h1>
+    </div>
 
-      <header class="mdl-layout__header mdl-layout__header--transparent">
-        <div class="mdl-layout__header-row">
-          <!-- Title -->
-          <span class="mdl-layout-title">Duncan Grubbs</span>
+    <div class="mobile-header">
+      <h2>Duncan Grubbs</h2>
+    </div>
 
-          <!-- Add spacer, to align navigation to the right -->
-          <div class="mdl-layout-spacer"></div>
+    <div class="handle">Menu</div>
 
-          <!-- Navigation -->
-          <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="index.html">Home</a>
-            <a class="mdl-navigation__link" href="about.html">About</a>
-            <a class="mdl-navigation__link" href="http://dhsdevelopers.org">Club</a>
-          </nav>
+    <nav>
+      <ul class="nav">
+        <a href="index.html"><li class="nav-link">Home</li></a>
+        <a href="about.html"><li class="nav-link">About</li></a>
+      </ul>
+    </nav>
 
-        </div>
+    <div class="container">
 
-      </header>
+    <div class="panel panel-default mobile-content">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          <h4>About Me</h4>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        Hi, My name is Duncan Grubbs and I am an officer in the Drake Developers Club.
+        Currently I am working on improving our club website as well as the home access client.
+        I attend Sir Francis Drake High School in San Anselmo California. I am a junior this year
+        and I am taking AP Computer Science as well as Physics and Chemistry. I love coding and web
+        development and I really enjoy being a part of this club.
+      </div>
+    </div>
+  </div>
 
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Duncan Grubbs</span>
+  <div class="panel panel-default mobile-content">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <h4>About the Club</h4>
+        </a>
+      </h4>
+    </div>
 
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="index.html">Home</a>
-          <a class="mdl-navigation__link" href="about.html">About</a>
-          <a class="mdl-navigation__link" href="http://dhsdevelopers.org">Club</a>
-        </nav>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 
+      <div class="panel-body">
+        The <a href="http://dhsdevelopers.org"><em>Drake Developers Club</em></a> was founded by
+        <a href="http://dhsdevelopers.org/roster/Luke_Martel/index.html">Lucas Martel</a>,
+        <a href="http://dhsdevelopers.org/roster/Jessica_Gerwin/index.html">Jessica Gerwin</a>,
+        <a href="http://dhsdevelopers.org/roster/Zander_Otavka/index.html">Zander Otavka</a>, and
+        myself last year. The mission of the club is to teach people how to code as well as create
+        innovative projects that involve coding. We mainly focus on web design but have some projects
+        in Python and Java. Each club member has thier own webpage that is linked to the main webpage.
+        This way each member can show off his/her skills with web design. Our club meets every Wednesday
+        in 127 (Mr. Milsteads room) for lunch. Feel free to join!
+
+        <button class="btn btn-default join-button" data-toggle="modal" data-target="#myModal">
+          Join
+        </button>
       </div>
 
-      <main class="mdl-layout__content">
+    </div>
+  </div>
 
-        <div class="row">
-          <div class="col-sm-6">
+  </div>
 
-            <div class="panel-group about-panel about-panel-top" id="accordion" role="tablist" aria-multiselectable="true">
-              <div class="panel panel-default">
+  <div class="container">
 
-                <div class="panel-heading" role="tab" id="headingOne">
-                  <h4 class="panel-title">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    About Me
-                  </a>
-                  </h4>
-                </div>
+    <div class="section">
+      <h1>About Me</h1>
+      Hi, My name is Duncan Grubbs and I am an officer in the Drake Developers Club.
+      Currently I am working on improving our club website as well as the home access client.
+      I attend Sir Francis Drake High School in San Anselmo California. I am a junior this year
+      and I am taking AP Computer Science as well as Physics and Chemistry. I love coding and web
+      development and I really enjoy being a part of this club.
+    </div>
 
-                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div class="section">
+      <h1>About the Club</h1>
+      The <a href="http://dhsdevelopers.org"><em>Drake Developers Club</em></a> was founded by
+      <a href="http://dhsdevelopers.org/roster/Luke_Martel/index.html">Lucas Martel</a>,
+      <a href="http://dhsdevelopers.org/roster/Jessica_Gerwin/index.html">Jessica Gerwin</a>,
+      <a href="http://dhsdevelopers.org/roster/Zander_Otavka/index.html">Zander Otavka</a>, and
+      myself last year. The mission of the club is to teach people how to code as well as create
+      innovative projects that involve coding. We mainly focus on web design but have some projects
+      in Python and Java. Each club member has thier own webpage that is linked to the main webpage.
+      This way each member can show off his/her skills with web design. Our club meets every Wednesday
+      in 127 (Mr. Milsteads room) for lunch. Feel free to join!
 
-                  <div class="panel-body">
-                    Hi, My name is Duncan Grubbs and I am an officer in the Drake Developers Club.
-                    Currently I am working on improving our club website as well as the home access client.
-                    I attend Sir Francis Drake High School in San Anselmo California. I am a junior this year
-                    and I am taking AP Computer Science as well as Physics and Chemistry. I love coding and web
-                    development and I really enjoy being a part of this club.
-                  </div>
+      <button class="btn btn-default join-button" data-toggle="modal" data-target="#myModal">
+        Join
+      </button>
+    </div>
 
-                </div>
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-sm-6">
-
-              <div class="panel-group about-panel" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-
-                <div class="panel-heading" role="tab" id="headingTwo">
-                  <h4 class="panel-title">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collpaseTwo">
-                    About the Club
-                  </a>
-                  </h4>
-                </div>
-
-                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-
-                  <div class="panel-body">
-                    The <a href="http://dhsdevelopers.org"><em>Drake Developers Club</em></a> was founded by
-                    <a href="http://dhsdevelopers.org/roster/Luke_Martel/index.html">Lucas Martel</a>,
-                    <a href="http://dhsdevelopers.org/roster/Jessica_Gerwin/index.html">Jessica Gerwin</a>,
-                    <a href="http://dhsdevelopers.org/roster/Zander_Otavka/index.html">Zander Otavka</a>, and
-                    myself last year. The mission of the club is to teach people how to code as well as create
-                    innovative projects that involve coding. We mainly focus on web design but have some projects
-                    in Python and Java. Each club member has thier own webpage that is linked to the main webpage.
-                    This way each member can show off his/her skills with web design. Our club meets every Wednesday
-                    in 127 (Mr. Milsteads room) for lunch. Feel free to join!
-
-                    <button class="btn btn-default join-button" data-toggle="modal" data-target="#myModal">
-                      Join
-                    </button>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </main>
+  </div>
 
       <!-- Modal -->
       <div class="modal fade about-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -145,13 +140,11 @@
         </div>
       </div>
 
-    </div>
-
-    <script src="scripts/script.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+    <script>
+      $('.handle').on('click', function(){
+        $('nav ul').toggleClass('showing');
+      });
+    </script>
 
   </body>
-
 </html>
