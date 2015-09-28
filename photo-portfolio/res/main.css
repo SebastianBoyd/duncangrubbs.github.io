@@ -1,10 +1,10 @@
-.name-link {
+a {
   text-decoration: none;
   color: white;
 }
 
-.name-link:hover {
-  color: white;
+.mobile-link {
+  display: none;
 }
 
 .content {
@@ -30,4 +30,8 @@
   color: #fff;
   font-size: 14px;
   font-weight: 500;
+}
+
+.mobile-header {
+  display: none;
 }
