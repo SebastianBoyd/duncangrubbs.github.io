@@ -10,6 +10,11 @@ body {
   padding: 40px 0;
   color: white;
   text-align: center;
+  height: 200px;
+}
+
+#header-name {
+  margin-top: 45px;
 }
 
 
@@ -37,7 +42,7 @@ nav ul li a {
 }
 
 nav ul li:hover{
-  background-color: #658A6F;
+  background-color: #B0B175;
 }
 
 section {
