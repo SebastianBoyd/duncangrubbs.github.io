@@ -1,6 +1,10 @@
-.name-link a {
+a {
   text-decoration: none;
   color: white;
+}
+
+a:hover{
+  color: grey;
 }
 
 .mobile-link {
@@ -21,11 +25,13 @@
   height: 256px;
   background: url('images/sheet.jpg') center / cover;
 }
+
 .demo-card-image > .mdl-card__actions {
   height: 52px;
   padding: 16px;
   background: rgba(0, 0, 0, 0.2);
 }
+
 .demo-card-image__filename {
   color: #fff;
   font-size: 14px;
