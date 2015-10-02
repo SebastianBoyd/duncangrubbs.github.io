@@ -17,13 +17,10 @@ body {
   margin-top: 45px;
 }
 
-
 nav ul {
   background-color: #202020;
   overflow: hidden;
-  padding: 0;
   text-align: left;
-  margin: 0;
   -webkit-transition: max-height 0.4s;
   -ms-max-height: 0.4s;
   -moz-transition: max-height 0.4s;
@@ -35,6 +32,10 @@ nav ul li {
   display: inline-block;
   padding: 20px;
   color: white;
+}
+
+.nav {
+  padding-left: 10%;
 }
 
 nav ul li a {
