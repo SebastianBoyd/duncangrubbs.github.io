@@ -1,6 +1,39 @@
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 900px){
+  .mobile-nav {
+    display: block;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
   nav ul {
     max-height: 0px;
+  }
+
+  nav ul {
+    background-color: #202020;
+    overflow: hidden;
+    text-align: left;
+    -webkit-transition: max-height 0.4s;
+    -ms-max-height: 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+  }
+
+  nav ul li {
+    display: inline-block;
+    padding: 20px;
+    color: white;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+  }
+
+  nav ul li:hover{
+    background-color: #B0B175;
   }
 
   .section {
@@ -47,5 +80,5 @@
     display: block;
     margin-top: 25px;
   }
-  
+
 }

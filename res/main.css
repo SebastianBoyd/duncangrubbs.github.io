@@ -17,15 +17,14 @@ body {
   margin-top: 45px;
 }
 
+.mobile-nav {
+  display: none;
+}
+
 nav ul {
   background-color: #202020;
   overflow: hidden;
   text-align: left;
-  -webkit-transition: max-height 0.4s;
-  -ms-max-height: 0.4s;
-  -moz-transition: max-height 0.4s;
-  -o-transition: max-height 0.4s;
-  transition: max-height 0.4s;
 }
 
 nav ul li {
@@ -34,8 +33,8 @@ nav ul li {
   color: white;
 }
 
-.nav {
-  padding-left: 10%;
+nav {
+  display: none;
 }
 
 nav ul li a {
