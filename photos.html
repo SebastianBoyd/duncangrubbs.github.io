@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <!-- Meta information -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Duncan Grubbs - Photos</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="res/main.css">
+    <link rel="stylesheet" type="text/css" href="res/mobile.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="icon" href="res/favicon.ico">
+    <link rel="shortcut icon" href="res/favicon.ico">
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <h1 id="header-name">Duncan Grubbs</h1>
+    </div>
+
+    <div class="mobile-header">
+      <h2>Duncan Grubbs</h2>
+    </div>
+
+    <div class="handle">Menu</div>
+
+    <nav>
+      <ul class="mobile-nav nav nav-bar">
+        <a href="index.html"><li class="nav-link">Home</li></a>
+        <a href="about.html"><li class="nav-link">About</li></a>
+        <a href="photos.html"><li class="nav-link">Photos</li></a>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul class="desktop-nav nav nav-bar">
+        <div class="container">
+          <a href="index.html"><li class="nav-link">Home</li></a>
+          <a href="about.html"><li class="nav-link">About</li></a>
+          <a href="photos.html"><li class="nav-link">Photos</li></a>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- Bootstrap Grid-->
+    <div class="container">
+
+      <h1 id="photo-title">Spring 2015</h1>
+
+        <!-- All the images for Spring 2015-->
+
+        <img class="img img-responsive img-rounded image" src="res/images/skull.jpg">
+        <p>Cow Skull
+        <br><em>Point Reyes, California</em></p>
+
+        <img class="img img-responsive img-rounded image"src="res/images/sheet.jpg">
+        <p>Sheet Caught in Wind
+        <br><em>Point Reyes, California</em></p>
+
+        <img class="img img-responsive img-rounded image" src="res/images/shadow-pattern.jpg">
+        <p>Shadow Pattern
+        <br><em>Point Reyes, California</em></p>
+
+        <img class="img img-responsive img-rounded image" src="res/images/logs.jpg">
+        <p>Logs
+        <br><em>Point Reyes, California</em></p>
+
+        <img class="img img-responsive img-rounded image" src="res/images/hole-cover.jpg">
+        <p>?
+        <br><em>Point Reyes, California</em></p>
+
+        <img class="img img-responsive img-rounded image" src="res/images/counter.jpg">
+        <p>? 2
+        <br><em>Point Reyes, California</em></p>
+
+    </div>
+
+    <script>
+      $('.handle').on('click', function(){
+        $('nav ul').toggleClass('showing');
+      });
+    </script>
+
+  </body>
+
+</html>
