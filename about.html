@@ -24,86 +24,94 @@
 
   <body>
 
-    <div class="header">
-      <h1 id="header-name">Duncan Grubbs</h1>
-    </div>
+      <div class="header">
+        <h1 id="header-name">Duncan Grubbs</h1>
+      </div>
 
-    <div class="mobile-header">
-      <h2>Duncan Grubbs</h2>
-    </div>
+      <div class="mobile-header">
+        <h2>Duncan Grubbs</h2>
+      </div>
 
     <div class="handle">Menu</div>
 
-    <nav>
-      <ul class="mobile-nav nav nav-bar">
-        <a href="index.html"><li class="nav-link">Home</li></a>
-        <a href="about.html"><li class="nav-link">About</li></a>
-        <a href="photos.html"><li class="nav-link">Photos</li></a>
-      </ul>
-    </nav>
+    <div class="row">
 
-    <nav>
-      <ul class="desktop-nav nav nav-bar">
-        <div class="container">
+      <nav>
+        <ul class="mobile-nav nav nav-bar">
           <a href="index.html"><li class="nav-link">Home</li></a>
           <a href="about.html"><li class="nav-link">About</li></a>
           <a href="photos.html"><li class="nav-link">Photos</li></a>
-        </div>
-      </ul>
-    </nav>
+        </ul>
+      </nav>
 
-    <div class="container">
-
-      <div class="panel panel-default mobile-content">
-
-      <div class="panel-heading" role="tab" id="headingOne">
-        <h4 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            <h4>About Me</h4>
-          </a>
-        </h4>
-      </div>
-
-        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-          <div class="panel-body">
-            Hi, My name is Duncan Grubbs and I am an officer in the Drake Developers Club.
-            Currently I am working on improving our club website as well as the home access client.
-            I attend Sir Francis Drake High School in San Anselmo California. I am a junior this year
-            and I am taking AP Computer Science as well as Physics and Chemistry. I love coding and web
-            development and I really enjoy being a part of this club.
+      <nav>
+        <ul class="desktop-nav nav nav-bar">
+          <div class="container">
+            <a href="index.html"><li class="nav-link">Home</li></a>
+            <a href="about.html"><li class="nav-link">About</li></a>
+            <a href="photos.html"><li class="nav-link">Photos</li></a>
           </div>
-        </div>
+        </ul>
+      </nav>
 
-      </div>
+    </div>
 
-      <div class="panel panel-default mobile-content">
-        <div class="panel-heading" role="tab" id="headingTwo">
+    <div class="wrapper">
+
+      <div class="container">
+
+        <div class="panel panel-default mobile-content">
+
+        <div class="panel-heading" role="tab" id="headingOne">
           <h4 class="panel-title">
-            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              <h4>About the Club</h4>
+            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <h4>About Me</h4>
             </a>
           </h4>
         </div>
 
-        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-
-          <div class="panel-body">
-            The <a href="http://dhsdevelopers.org"><em>Drake Developers Club</em></a> was founded by
-            <a href="http://dhsdevelopers.org/roster/Luke_Martel/index.html">Lucas Martel</a>,
-            <a href="http://dhsdevelopers.org/roster/Jessica_Gerwin/index.html">Jessica Gerwin</a>,
-            <a href="http://dhsdevelopers.org/roster/Zander_Otavka/index.html">Zander Otavka</a>, and
-            myself last year. The mission of the club is to teach people how to code as well as create
-            innovative projects that involve coding. We mainly focus on web design but have some projects
-            in Python and Java. Each club member has thier own webpage that is linked to the main webpage.
-            This way each member can show off his/her skills with web design. Our club meets every Wednesday
-            in 127 (Mr. Milsteads room) for lunch. Feel free to join!
-
-            <button class="btn btn-default join-button" data-toggle="modal" data-target="#myModal">
-              Join
-            </button>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+              Hi, My name is Duncan Grubbs and I am an officer in the Drake Developers Club.
+              Currently I am working on improving our club website as well as the home access client.
+              I attend Sir Francis Drake High School in San Anselmo California. I am a junior this year
+              and I am taking AP Computer Science as well as Physics and Chemistry. I love coding and web
+              development and I really enjoy being a part of this club.
+            </div>
           </div>
 
         </div>
+
+        <div class="panel panel-default mobile-content">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <h4>About the Club</h4>
+              </a>
+            </h4>
+          </div>
+
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+
+            <div class="panel-body">
+              The <a href="http://dhsdevelopers.org"><em>Drake Developers Club</em></a> was founded by
+              <a href="http://dhsdevelopers.org/roster/Luke_Martel/index.html">Lucas Martel</a>,
+              <a href="http://dhsdevelopers.org/roster/Jessica_Gerwin/index.html">Jessica Gerwin</a>,
+              <a href="http://dhsdevelopers.org/roster/Zander_Otavka/index.html">Zander Otavka</a>, and
+              myself last year. The mission of the club is to teach people how to code as well as create
+              innovative projects that involve coding. We mainly focus on web design but have some projects
+              in Python and Java. Each club member has thier own webpage that is linked to the main webpage.
+              This way each member can show off his/her skills with web design. Our club meets every Wednesday
+              in 127 (Mr. Milsteads room) for lunch. Feel free to join!
+
+              <button class="btn btn-default join-button" data-toggle="modal" data-target="#myModal">
+                Join
+              </button>
+            </div>
+
+          </div>
+        </div>
+
       </div>
 
     </div>

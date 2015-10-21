@@ -1,6 +1,7 @@
 @media screen and (max-width: 900px){
   .mobile-nav {
     display: block;
+    position: relative;
   }
 
   .desktop-nav {
@@ -70,10 +71,12 @@
     padding: 40px 0;
     color: white;
     text-align: Left;
+    height: 200px;
   }
 
   .mobile-header h2 {
-    margin-left: 10px;
+    margin-left: 20px;
+    margin-top: 45px;
   }
 
   .mobile-content {
