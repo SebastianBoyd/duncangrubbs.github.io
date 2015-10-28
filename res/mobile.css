@@ -4,6 +4,10 @@
     position: relative;
   }
 
+  .mobile-nav a {
+    padding-left: 10px;
+  }
+
   .desktop-nav {
     display: none;
   }
@@ -72,6 +76,8 @@
     color: white;
     text-align: Left;
     height: 200px;
+    z-index: -1;
+    position: fixed;
   }
 
   .mobile-header h2 {
