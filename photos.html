@@ -116,8 +116,16 @@
   </div>
 
     <script>
-      $('.handle').on('click', function(){
-        $('nav ul').toggleClass('showing');
+    $("document").ready(function($){
+      var nav = $('.desktop-nav');
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 125) {
+            nav.addClass("fixed");
+        } else {
+            nav.removeClass("fixed");
+          }
+        });
       });
     </script>
 
