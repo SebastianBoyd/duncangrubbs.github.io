@@ -91,4 +91,13 @@
     margin-top: 25px;
   }
 
+  .fixed {
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+
 }

@@ -213,6 +213,18 @@
           }
         });
       });
+
+      $("document").ready(function($){
+        var nav = $('.handle');
+
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 125) {
+              nav.addClass("fixed");
+          } else {
+              nav.removeClass("fixed");
+            }
+          });
+        });
     </script>
 
   </body>
