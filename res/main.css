@@ -42,12 +42,12 @@ p {
 .header {
   background-image: url("header.png");
   width: 100%;
-  hieght: 200px;
+  height: 200px;
   padding: 40px 0px;
   color: white;
   text-align: center;
   height: 200px;
-  position: fixed;
+	position: fixed;
   z-index: -1;
 }
 
