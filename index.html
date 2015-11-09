@@ -20,6 +20,7 @@
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
   </head>
 
   <body>
@@ -243,36 +244,6 @@
     </div>
 
     </div>
-
-    <script>
-    $("document").ready(function($){
-      var nav = $('.desktop-nav');
-
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > 202) {
-            nav.addClass("fixed");
-        } else {
-            nav.removeClass("fixed");
-          }
-        });
-      });
-
-      $("document").ready(function($){
-        var nav = $('.handle');
-
-        $(window).scroll(function () {
-          if ($(this).scrollTop() > 202) {
-              nav.addClass("fixed");
-          } else {
-              nav.removeClass("fixed");
-            }
-          });
-        });
-			
-				$('.handle').on('click', function(){
-					$('nav ul').toggleClass('showing');
-				});
-    </script>
 
   </body>
 
