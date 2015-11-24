@@ -121,3 +121,7 @@ nav ul li:hover{
   background-color: #202020;
   border-radius: 3px;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
