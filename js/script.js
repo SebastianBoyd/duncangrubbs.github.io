@@ -11,6 +11,18 @@ $("document").ready(function($){
 });
 
 $("document").ready(function($){
+    var nav = $('.mobile-nav');
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 202) {
+          nav.addClass("fixed");
+      } else {
+          nav.removeClass("fixed");
+      }
+  });
+});
+
+$("document").ready(function($){
   var nav = $('.handle');
 
   $(window).scroll(function () {

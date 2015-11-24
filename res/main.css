@@ -40,7 +40,7 @@ p {
 
 /* Header Rules */
 .header {
-  background-image: url("header.png");
+  background-image: url("images/header.png");
   width: 100%;
   height: 200px;
   padding: 40px 0px;
