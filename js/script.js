@@ -1,3 +1,4 @@
+//fixed nav-bar code for desktop
 $("document").ready(function($){
     var nav = $('.desktop-nav');
 
@@ -10,6 +11,7 @@ $("document").ready(function($){
   });
 });
 
+//fixed nav-bar code for mobile
 $("document").ready(function($){
     var nav = $('.mobile-nav');
 
@@ -22,6 +24,7 @@ $("document").ready(function($){
   });
 });
 
+//animation for mobile-nav
 $("document").ready(function($){
   var nav = $('.handle');
 
