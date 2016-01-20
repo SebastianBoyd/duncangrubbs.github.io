@@ -77,6 +77,13 @@ p {
   margin-top: 45px;
 }
 
+.banner-background {
+  margin-top: 20px;
+  height: 10px;
+  border-radius: 5px;
+  background: gray;
+}
+
 .mobile-header {
   display: none;
 }
