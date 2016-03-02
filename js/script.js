@@ -12,7 +12,7 @@ $("document").ready(function($){
 });
 
 //fixed nav-bar code for mobile
-$("document").ready(function($){
+/* $("document").ready(function($){
     var nav = $('.mobile-nav');
 
     $(window).scroll(function () {
@@ -22,10 +22,9 @@ $("document").ready(function($){
           nav.removeClass("fixed");
       }
   });
-});
+}); */
 
-//animation for mobile-nav
-$("document").ready(function($){
+/* $("document").ready(function($){
   var nav = $('.handle');
 
   $(window).scroll(function () {
@@ -35,8 +34,9 @@ $("document").ready(function($){
       nav.removeClass("fixed");
     }
   });
-});
+}); */
 
+//animation for mobile nav
 $('.handle').on('click', function(){
 	$('nav ul').toggleClass('showing');
 });
