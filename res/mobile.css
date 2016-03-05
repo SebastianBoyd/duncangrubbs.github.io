@@ -1,14 +1,11 @@
 @media screen and (max-width: 900px){
+
   .mobile-nav {
     display: block;
   }
 
   .mobile-nav a {
     padding-left: 10px;
-  }
-
-  .desktop-nav {
-    display: none;
   }
 
 	/* Nav Rules */
@@ -25,7 +22,7 @@
     -moz-transition: max-height 0.4s;
     -o-transition: max-height 0.4s;
     transition: max-height 0.4s;
-		z-index: 9999;
+		z-index: 5;
   }
 
   nav ul li {

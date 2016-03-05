@@ -12,7 +12,7 @@ $("document").ready(function($){
 });
 
 //fixed nav-bar code for mobile
-/* $("document").ready(function($){
+$("document").ready(function($){
     var nav = $('.mobile-nav');
 
     $(window).scroll(function () {
@@ -21,18 +21,6 @@ $("document").ready(function($){
       } else {
           nav.removeClass("fixed");
       }
-  });
-}); */
-
-$("document").ready(function($){
-  var nav = $('.handle');
-
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 202) {
-      nav.addClass("fixed");
-    } else {
-      nav.removeClass("fixed");
-    }
   });
 });
 
