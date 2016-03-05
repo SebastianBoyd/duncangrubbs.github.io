@@ -24,7 +24,7 @@ $("document").ready(function($){
   });
 }); */
 
-/* $("document").ready(function($){
+$("document").ready(function($){
   var nav = $('.handle');
 
   $(window).scroll(function () {
@@ -34,7 +34,7 @@ $("document").ready(function($){
       nav.removeClass("fixed");
     }
   });
-}); */
+});
 
 //animation for mobile nav
 $('.handle').on('click', function(){
