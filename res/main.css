@@ -8,8 +8,8 @@ body {
 }
 
 html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Content Rules */
@@ -62,7 +62,7 @@ p {
 
 /* Header Rules */
 .header {
-  background-image: url("images/header.png");
+  background-image: url("images/head.jpg");
   width: 100%;
   height: 200px;
   padding: 40px 0px;
@@ -75,13 +75,8 @@ p {
 
 #header-name {
   margin-top: 45px;
-}
-
-.banner-background {
-  margin-top: 20px;
-  height: 10px;
-  border-radius: 5px;
-  background: gray;
+  font-size: 50px;
+  color: #202020;
 }
 
 .mobile-header {
@@ -110,7 +105,7 @@ nav ul li a {
 }
 
 nav ul li:hover{
-  background-color: #B0B175;
+  background-color: #9E9E9E;
 }
 
 .mobile-nav {
