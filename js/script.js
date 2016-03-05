@@ -1,4 +1,4 @@
-//fixed nav-bar code for desktop
+//Fixed nav-bar Code for Desktop
 $("document").ready(function($){
     var nav = $('.desktop-nav');
 
@@ -11,7 +11,7 @@ $("document").ready(function($){
   });
 });
 
-//fixed nav-bar code for mobile
+//Fixed nav-bar Code for Mobile
 $("document").ready(function($){
     var nav = $('.mobile-nav');
 
@@ -24,7 +24,7 @@ $("document").ready(function($){
   });
 });
 
-//animation for mobile nav
+//Animation for Mobile Navigation
 $('.handle').on('click', function(){
 	$('nav ul').toggleClass('showing');
 });
