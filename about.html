@@ -28,23 +28,23 @@
 
   <body>
 
+    <!-- DESKTOP HEADER -->
     <div class="header">
       <h1 id="header-name">Duncan Grubbs</h1>
     </div>
 
+    <!-- MOBILE HEADER -->
     <div class="mobile-header">
-      <h2>Duncan Grubbs</h2>
+      <h1 id="mobile-header-name">Duncan Grubbs</h1>
     </div>
 
-    <div class="handle">Menu</div>
-
+    <!-- NAVIGATION -->
     <div class="row">
 
       <nav>
         <ul class="mobile-nav nav nav-bar">
           <a href="index.html"><li class="nav-link">Home</li></a>
           <a href="about.html"><li class="nav-link">About</li></a>
-          <a href="photos.html"><li class="nav-link">Photos</li></a>
         </ul>
       </nav>
 
@@ -52,7 +52,7 @@
         <ul class="desktop-nav nav nav-bar">
           <div class="container">
             <a href="index.html"><li class="nav-link">Home</li></a>
-            <a href="about.html"><li class="nav-link">About</li></a>
+            <a href="about.html"><li class="nav-link active">About</li></a>
             <a href="photos.html"><li class="nav-link">Photos</li></a>
           </div>
         </ul>
@@ -60,6 +60,7 @@
 
     </div>
 
+    <!-- MOBILE CONTENT -->
     <div class="wrapper">
 
       <div class="container">
@@ -140,6 +141,9 @@
       </div>
 
     </div>
+    <!-- END OF MOBILE CONTENT -->
+
+    <!-- DESKTOP CONTENT -->
     <div class="wrapper">
 
       <div class="container">
@@ -171,7 +175,9 @@
             Join
           </button>
         </div>
-        <div class="line-one"></div>
+
+        <div class="line"></div>
+
         <div class="section">
           <h1>About the Website</h1>
           <p>This website was coded by Duncan Grubbs using HTML, CSS, and Javascript as well as the <a href="http://getbootstrap.com">Bootstrap</a> CSS and
@@ -183,6 +189,7 @@
       </div>
 
     </div>
+    <!-- END OF DESKTOP CONTENT -->
 
     <!-- Modal -->
     <div class="modal fade about-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

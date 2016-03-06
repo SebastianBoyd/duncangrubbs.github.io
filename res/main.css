@@ -12,11 +12,11 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Content Rules */
 p {
   font-size: 16px;
 }
 
+/* Content Rules */
 .section {
   margin-bottom: 40px;
 }
@@ -34,11 +34,11 @@ p {
   display: none;
 }
 
-#photo-title {
+#photo-title-15, #photo-title-16 {
   margin-bottom: 35px;
 }
 
-/* Image Rules */
+/* Image Page Rules */
 .solo-image {
   text-align: center;
   margin-bottom: 80px;
@@ -84,6 +84,10 @@ p {
 }
 
 /* Navigation Rules */
+nav {
+  display: none;
+}
+
 nav ul {
   background-color: #202020;
   overflow: hidden;
@@ -94,10 +98,6 @@ nav ul li {
   display: inline-block;
   padding: 20px;
   color: white;
-}
-
-nav {
-  display: none;
 }
 
 nav ul li a {
@@ -146,5 +146,9 @@ nav ul li:hover{
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
+}
+
+.active {
+  color: grey;
 }
