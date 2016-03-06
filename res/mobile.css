@@ -1,11 +1,7 @@
 @media screen and (max-width: 900px) {
 
-  .mobile-nav {
+  .desktop-nav {
     display: block;
-  }
-
-  .mobile-nav a {
-    padding-left: 10px;
   }
 
 	/* Nav Rules */
@@ -94,7 +90,7 @@
   }
 
   .fixed {
-    z-index: 9999;
+    z-index: 5;
     position: fixed;
     left: 0;
     top: 0;

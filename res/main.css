@@ -84,10 +84,6 @@ p {
 }
 
 /* Navigation Rules */
-nav {
-  display: none;
-}
-
 nav ul {
   background-color: #202020;
   overflow: hidden;
@@ -108,6 +104,10 @@ nav ul li:hover{
   background-color: #9E9E9E;
 }
 
+.nav-placeholder {
+  margin-bottom: 0;
+}
+
 .mobile-nav {
   display: none;
 }
@@ -119,10 +119,8 @@ nav ul li:hover{
 .fixed {
   z-index: 5;
   position: fixed;
-  left: 0;
-  top: 0;
   width: 100%;
-  margin-top: 0;
+  margin: 0 0 0 0;
 }
 
 /* Misc. Rules */
