@@ -108,10 +108,6 @@ nav ul li:hover{
   margin-bottom: 0;
 }
 
-.mobile-nav {
-  display: none;
-}
-
 .desktop-nav {
   margin-top: 200px;
 }

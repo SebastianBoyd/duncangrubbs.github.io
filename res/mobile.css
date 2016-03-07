@@ -1,42 +1,9 @@
 @media screen and (max-width: 900px) {
 
+	/* Nav Rules */
   .desktop-nav {
     display: block;
-  }
-
-	/* Nav Rules */
-  nav ul {
-    max-height: 0px;
-  }
-
-  nav ul {
-    background-color: #202020;
-    overflow: hidden;
-    text-align: left;
-    -webkit-transition: max-height 0.4s;
-    -ms-max-height: 0.4s;
-    -moz-transition: max-height 0.4s;
-    -o-transition: max-height 0.4s;
-    transition: max-height 0.4s;
-		z-index: 5;
-  }
-
-  nav ul li {
-    display: inline-block;
-    padding: 20px;
-    color: white;
-		box-sizing: border-box;
-    width: 100%;
-    padding: 15px;
-    text-align: left;
-  }
-
-  nav ul li a {
-    text-decoration: none;
-  }
-
-  nav ul li:hover{
-    background-color: #B0B175;
+    margin-top: 200px;
   }
 
 	/* Mobile Content */
@@ -98,6 +65,11 @@
     margin-top: 0;
   }
 
+  .line {
+    display: none;
+  }
+
+  /* Misc. */
   ::-webkit-scrollbar {
     display: none;
   }
