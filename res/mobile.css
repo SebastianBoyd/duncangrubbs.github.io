@@ -6,7 +6,7 @@
     margin-top: 200px;
   }
 
-	/* Mobile Content */
+	/* Content Rules */
   .section {
     display: none;
   }
@@ -23,6 +23,25 @@
     display: block;
   }
 
+  .mobile-content {
+    display: block;
+    margin-top: 25px;
+  }
+
+  .fixed {
+    z-index: 5;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  #mobile-home-titles {
+    display: block;
+  }
+
+  /* Header Rules */
   .header {
     display: none;
   }
@@ -49,20 +68,6 @@
     margin-top: 10px;
     font-size: 50px;
     color: #202020;
-  }
-
-  .mobile-content {
-    display: block;
-    margin-top: 25px;
-  }
-
-  .fixed {
-    z-index: 5;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    margin-top: 0;
   }
 
   /* Misc. */

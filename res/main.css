@@ -38,6 +38,10 @@ p {
   margin-bottom: 35px;
 }
 
+#mobile-home-titles {
+  display: none;
+}
+
 /* Image Page Rules */
 .solo-image {
   text-align: center;
