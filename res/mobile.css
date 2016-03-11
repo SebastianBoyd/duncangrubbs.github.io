@@ -46,7 +46,7 @@
   }
 
   #mobile-header-name {
-    margin-top: 45px;
+    margin-top: 10px;
     font-size: 50px;
     color: #202020;
   }
@@ -65,13 +65,20 @@
     margin-top: 0;
   }
 
+  /* Misc. */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   .line {
     display: none;
   }
 
-  /* Misc. */
-  ::-webkit-scrollbar {
-    display: none;
+  .mobile-line {
+    width: 75%;
+    height: 4px;
+    background-color: #202020;
+    border-radius: 3px;
   }
 
 }
