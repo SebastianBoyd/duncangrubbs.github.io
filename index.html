@@ -13,97 +13,21 @@
     <title>Duncan Grubbs - Home</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="res/main.css">
-    <link rel="stylesheet" type="text/css" href="res/mobile.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- Favicons -->
-    <link rel="icon" href="res/images/favicon-main.png">
-    <link rel="shortcut icon" href="res/images/favicon-main.png">
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
+    <link rel="icon" href="res/favicon.png">
+    <link rel="shortcut icon" href="res/favicon.png">
   </head>
 
   <body>
 
-    <!-- DESKTOP HEADER -->
-    <div class="header">
-      <h1 id="header-name">Duncan Grubbs</h1>
-    </div>
+    <div id="header"><button class="js-menu material-icons header__menu-toggle">menu</button></div>
+    <div id="message">Welcome.</div>
 
-    <!-- MOBILE HEADER -->
-    <div class="mobile-header">
-      <h1 id="mobile-header-name">Duncan Grubbs</h1>
-    </div>
-
-    <!-- NAVIGATION -->
-    <div class="row">
-
-      <nav>
-        <ul class="desktop-nav nav nav-bar">
-          <div class="container">
-            <a href="index.html"><li class="nav-link active">Home</li></a>
-            <a href="about.html"><li class="nav-link">About</li></a>
-            <a href="photos.html"><li class="nav-link">Photos</li></a>
-          </div>
-        </ul>
-      </nav>
-
-    </div>
-
-    <!-- DESKTOP CONTENT -->
-    <div class="wrapper">
-      <div class="container">
-
-        <div class="section">
-
-          <h1>Home</h1>
-          <div class="line"></div>
-          <h2>Example Writing</h2>
-
-        </div>
-
-      </div>
-    </div>
-    <!-- END OF DESKTOP CONTENT -->
-
-    <!-- MOBILE CONTENT -->
-    <div class="wrapper">
-
-      <div class="container">
-
-        <div id="mobile-home-titles">
-          <h1>Home</h1>
-          <div class="mobile-line"></div>
-          <h2>Example Writing</h2>
-        </div>
-
-        <div class="panel panel-default mobile-content">
-
-          <div class="panel-heading" role="tab" id="headingOne">
-
-            <h4 class="panel-title">
-              <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                <h4>Donald Trump Paper</h4>
-              </a>
-            </h4>
-
-          </div>
-
-          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-    <!-- END OF MOBILE CONTENT -->
-
+    <!-- Scripts -->
+    <script src="scripts/script.js"></script>
   </body>
 
 </html>
