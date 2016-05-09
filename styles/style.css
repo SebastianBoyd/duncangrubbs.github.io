@@ -6,6 +6,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  font-family: 'Arial';
 }
 
 button {
@@ -33,11 +34,23 @@ button {
   left: 0;
   right: 0;
   font-size: 60px;
-  font-family: 'Arial';
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: absolute;
-  flex-direction: column;
+  margin-left: 16px;
+  flex-direction: row;
   color: var(--header-color);
+}
+
+#welcome {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  flex-direction: row;
+  color: var(--header-color);
+  margin-left: 500px;
+  width: 100%;
 }
