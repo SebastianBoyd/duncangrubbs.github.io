@@ -1,8 +1,3 @@
-:root {
-  --header-color: #414042;
-  --white: #FFF;
-}
-
 html, body {
   margin: 0;
   padding: 0;
@@ -19,7 +14,7 @@ button {
   width: 100%;
   height: 56px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  background: var(--header-color);
+  background: #FFF;
   margin: 0;
   padding: 0 16px;
   align-items: center;
@@ -38,7 +33,7 @@ button {
   align-items: center;
   margin-left: 16px;
   flex-direction: row;
-  color: var(--header-color);
+  color: #414042;
 }
 
 #welcome {
@@ -50,7 +45,7 @@ button {
   align-items: center;
   position: absolute;
   flex-direction: row;
-  color: var(--header-color);
-  margin-left: 500px;
-  width: 100%;
+  color: #414042;
+  margin-left: 25%;
+  width: 75%;
 }
