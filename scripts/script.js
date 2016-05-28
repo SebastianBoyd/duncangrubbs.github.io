@@ -21,16 +21,16 @@ function addListeners() {
   var $blockFour = document.querySelector('.block-four');
   if (window.addEventListener) {
     $circleOne.addEventListener('mouseover', shapesOne, false);
-    $blockOne.addEventListener('mouseover', shapesOne, false);
+    $blockOne.addEventListener('mouseover', addOne, false);
 
     $circleTwo.addEventListener('mouseover', shapesTwo, false);
-    $blockTwo.addEventListener('mouseover', shapesTwo, false);
+    $blockTwo.addEventListener('mouseover', addTwo, false);
 
     $circleThree.addEventListener('mouseover', shapesThree, false);
-    $blockThree.addEventListener('mouseover', shapesThree, false);
+    $blockThree.addEventListener('mouseover', addThree, false);
 
     $circleFour.addEventListener('mouseover', shapesFour, false);
-    $blockFour.addEventListener('mouseover', shapesFour, false);
+    $blockFour.addEventListener('mouseover', addFour, false);
   } else {
     console.log('RIP');
   }
@@ -73,6 +73,54 @@ function addListeners() {
     var temp1 = circleDimFour.toString();
     $circleFour.style.height = temp1 + 'px';
     $circleFour.style.width = temp1 + 'px';
+  }
+
+  function addOne() {
+    if(heightOne < 600) {
+      heightOne = heightOne + 3;
+      var temp = heightOne.toString();
+      $blockOne.style.height = temp + 'px';
+      circleDimOne = circleDimOne + 2;
+      var temp1 = circleDimOne.toString();
+      $circleOne.style.height = temp1 + 'px';
+      $circleOne.style.width = temp1 + 'px';
+    }
+  }
+
+  function addTwo() {
+    if(heightTwo < 600) {
+      heightTwo = heightTwo + 3;
+      var temp = heightTwo.toString();
+      $blockTwo.style.height = temp + 'px';
+      circleDimTwo = circleDimTwo + 2;
+      var temp1 = circleDimTwo.toString();
+      $circleTwo.style.height = temp1 + 'px';
+      $circleTwo.style.width = temp1 + 'px';
+    }
+  }
+
+  function addThree() {
+    if(heightThree < 600) {
+      heightThree = heightThree + 3;
+      var temp = heightThree.toString();
+      $blockThree.style.height = temp + 'px';
+      circleDimThree = circleDimThree + 2;
+      var temp1 = circleDimThree.toString();
+      $circleThree.style.height = temp1 + 'px';
+      $circleThree.style.width = temp1 + 'px';
+    }
+  }
+
+  function addFour() {
+    if(heightFour < 600) {
+      heightFour = heightFour + 3;
+      var temp = heightFour.toString();
+      $blockFour.style.height = temp + 'px';
+      circleDimFour = circleDimFour + 2;
+      var temp1 = circleDimFour.toString();
+      $circleFour.style.height = temp1 + 'px';
+      $circleFour.style.width = temp1 + 'px';
+    }
   }
 }
 
