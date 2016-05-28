@@ -76,7 +76,7 @@ function addListeners() {
   }
 
   function addOne() {
-    if(heightOne < 600) {
+    if(heightThree < 600) {
       heightOne = heightOne + 3;
       var temp = heightOne.toString();
       $blockOne.style.height = temp + 'px';
@@ -88,7 +88,7 @@ function addListeners() {
   }
 
   function addTwo() {
-    if(heightTwo < 600) {
+    if(heightFour < 600) {
       heightTwo = heightTwo + 3;
       var temp = heightTwo.toString();
       $blockTwo.style.height = temp + 'px';
@@ -100,7 +100,7 @@ function addListeners() {
   }
 
   function addThree() {
-    if(heightThree < 600) {
+    if(heightOne < 600) {
       heightThree = heightThree + 3;
       var temp = heightThree.toString();
       $blockThree.style.height = temp + 'px';
@@ -112,7 +112,7 @@ function addListeners() {
   }
 
   function addFour() {
-    if(heightFour < 600) {
+    if(heightTwo < 600) {
       heightFour = heightFour + 3;
       var temp = heightFour.toString();
       $blockFour.style.height = temp + 'px';
