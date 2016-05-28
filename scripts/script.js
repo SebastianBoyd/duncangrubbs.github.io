@@ -20,15 +20,22 @@ function addListeners() {
   var $circleFour = document.querySelector('.circle-four');
   var $blockFour = document.querySelector('.block-four');
   if (window.addEventListener) {
-    $circleOne.addEventListener('mouseover', circleOne, false);
-    $circleTwo.addEventListener('mouseover', circleTwo, false);
-    $circleThree.addEventListener('mouseover', circleThree, false);
-    $circleFour.addEventListener('mouseover', circleFour, false);
+    $circleOne.addEventListener('mouseover', shapesOne, false);
+    $blockOne.addEventListener('mouseover', shapesOne, false);
+
+    $circleTwo.addEventListener('mouseover', shapesTwo, false);
+    $blockTwo.addEventListener('mouseover', shapesTwo, false);
+
+    $circleThree.addEventListener('mouseover', shapesThree, false);
+    $blockThree.addEventListener('mouseover', shapesThree, false);
+
+    $circleFour.addEventListener('mouseover', shapesFour, false);
+    $blockFour.addEventListener('mouseover', shapesFour, false);
   } else {
     console.log('RIP');
   }
 
-  function circleOne() {
+  function shapesOne() {
     heightOne = heightOne - 3;
     var temp = heightOne.toString();
     $blockOne.style.height = temp + 'px';
@@ -38,7 +45,7 @@ function addListeners() {
     $circleOne.style.width = temp1 + 'px';
   }
 
-  function circleTwo() {
+  function shapesTwo() {
     heightTwo = heightTwo - 3;
     var temp = heightTwo.toString();
     $blockTwo.style.height = temp + 'px';
@@ -48,7 +55,7 @@ function addListeners() {
     $circleTwo.style.width = temp1 + 'px';
   }
 
-  function circleThree() {
+  function shapesThree() {
     heightThree = heightThree - 3;
     var temp = heightThree.toString();
     $blockThree.style.height = temp + 'px';
@@ -58,7 +65,7 @@ function addListeners() {
     $circleThree.style.width = temp1 + 'px';
   }
 
-  function circleFour() {
+  function shapesFour() {
     heightFour = heightFour - 3;
     var temp = heightFour.toString();
     $blockFour.style.height = temp + 'px';
