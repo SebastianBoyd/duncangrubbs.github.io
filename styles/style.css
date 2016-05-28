@@ -37,7 +37,7 @@ body {
 }
 
 #content-two {
-  height: 600px;
+  height: 800px;
   justify-content: center;
   display: flex;
   flex-direction: row;

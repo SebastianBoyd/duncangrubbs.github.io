@@ -1,14 +1,14 @@
 var totalHeight;
 
-var circleDimOne = 100;
-var circleDimTwo = 200;
-var circleDimThree = 300;
-var circleDimFour = 400;
+var circleDimOne = Math.floor((Math.random() * 400) + 1);
+var circleDimTwo = Math.floor((Math.random() * 400) + 1);
+var circleDimThree = Math.floor((Math.random() * 400) + 1);
+var circleDimFour = Math.floor((Math.random() * 400) + 1);
 
-var heightOne = 600;
-var heightTwo = 600;
-var heightThree = 600;
-var heightFour = 600;
+var heightOne = Math.floor((Math.random() * 600) + 1);
+var heightTwo = Math.floor((Math.random() * 600) + 1);
+var heightThree = Math.floor((Math.random() * 600) + 1);
+var heightFour = Math.floor((Math.random() * 600) + 1);
 
 function addListeners() {
   var $circleOne = document.querySelector('.circle-one');
@@ -19,6 +19,19 @@ function addListeners() {
   var $blockThree = document.querySelector('.block-three');
   var $circleFour = document.querySelector('.circle-four');
   var $blockFour = document.querySelector('.block-four');
+  $circleOne.style.height = circleDimOne;
+  $circleTwo.style.height = circleDimTwo;
+  $circleThree.style.height = circleDimThree;
+  $circleFour.style.height = circleDimFour;
+  $circleOne.style.width = circleDimOne;
+  $circleTwo.style.width = circleDimTwo;
+  $circleThree.style.width = circleDimThree;
+  $circleFour.style.width = circleDimFour;
+
+  $blockOne.style.height = heightOne;
+  $blockTwo.style.height = heightTwo;
+  $blockThree.style.height = heightThree;
+  $blockFour.style.height = heightFour;
   if (window.addEventListener) {
     $circleOne.addEventListener('mouseover', shapesOne, false);
     $blockOne.addEventListener('mouseover', addOne, false);
@@ -36,90 +49,98 @@ function addListeners() {
   }
 
   function shapesOne() {
-    heightOne = heightOne - 3;
+    heightOne = heightOne - 8;
     var temp = heightOne.toString();
     $blockOne.style.height = temp + 'px';
-    circleDimOne = circleDimOne - 2;
+    circleDimOne = circleDimOne - 5;
     var temp1 = circleDimOne.toString();
     $circleOne.style.height = temp1 + 'px';
     $circleOne.style.width = temp1 + 'px';
   }
 
   function shapesTwo() {
-    heightTwo = heightTwo - 3;
+    heightTwo = heightTwo - 8;
     var temp = heightTwo.toString();
     $blockTwo.style.height = temp + 'px';
-    circleDimTwo = circleDimTwo - 2;
+    circleDimTwo = circleDimTwo - 5;
     var temp1 = circleDimTwo.toString();
     $circleTwo.style.height = temp1 + 'px';
     $circleTwo.style.width = temp1 + 'px';
   }
 
   function shapesThree() {
-    heightThree = heightThree - 3;
+    heightThree = heightThree - 8;
     var temp = heightThree.toString();
     $blockThree.style.height = temp + 'px';
-    circleDimThree = circleDimThree - 2;
+    circleDimThree = circleDimThree - 5;
     var temp1 = circleDimThree.toString();
     $circleThree.style.height = temp1 + 'px';
     $circleThree.style.width = temp1 + 'px';
   }
 
   function shapesFour() {
-    heightFour = heightFour - 3;
+    heightFour = heightFour - 8;
     var temp = heightFour.toString();
     $blockFour.style.height = temp + 'px';
-    circleDimFour = circleDimFour - 2;
+    circleDimFour = circleDimFour - 5;
     var temp1 = circleDimFour.toString();
     $circleFour.style.height = temp1 + 'px';
     $circleFour.style.width = temp1 + 'px';
   }
 
   function addOne() {
-    if(heightThree < 600) {
-      heightOne = heightOne + 3;
+    if(heightThree < 300) {
+      heightOne = heightOne + 8;
       var temp = heightOne.toString();
       $blockOne.style.height = temp + 'px';
-      circleDimOne = circleDimOne + 2;
-      var temp1 = circleDimOne.toString();
-      $circleOne.style.height = temp1 + 'px';
-      $circleOne.style.width = temp1 + 'px';
+      if (circleDimOne <= 300) {
+        circleDimOne = circleDimOne + 5;
+        var temp1 = circleDimOne.toString();
+        $circleOne.style.height = temp1 + 'px';
+        $circleOne.style.width = temp1 + 'px';
+      }
     }
   }
 
   function addTwo() {
-    if(heightFour < 600) {
-      heightTwo = heightTwo + 3;
+    if(heightFour < 188) {
+      heightTwo = heightTwo + 8;
       var temp = heightTwo.toString();
       $blockTwo.style.height = temp + 'px';
-      circleDimTwo = circleDimTwo + 2;
-      var temp1 = circleDimTwo.toString();
-      $circleTwo.style.height = temp1 + 'px';
-      $circleTwo.style.width = temp1 + 'px';
+      if (circleDimTwo <= 300) {
+        circleDimTwo = circleDimTwo + 5;
+        var temp1 = circleDimTwo.toString();
+        $circleTwo.style.height = temp1 + 'px';
+        $circleTwo.style.width = temp1 + 'px';
+      }
     }
   }
 
   function addThree() {
-    if(heightOne < 600) {
-      heightThree = heightThree + 3;
+    if(heightOne < 267) {
+      heightThree = heightThree + 8;
       var temp = heightThree.toString();
       $blockThree.style.height = temp + 'px';
-      circleDimThree = circleDimThree + 2;
-      var temp1 = circleDimThree.toString();
-      $circleThree.style.height = temp1 + 'px';
-      $circleThree.style.width = temp1 + 'px';
+      if (circleDimThree <= 300) {
+        circleDimThree = circleDimThree + 5;
+        var temp1 = circleDimThree.toString();
+        $circleThree.style.height = temp1 + 'px';
+        $circleThree.style.width = temp1 + 'px';
+      }
     }
   }
 
   function addFour() {
-    if(heightTwo < 600) {
-      heightFour = heightFour + 3;
+    if(heightTwo < 238) {
+      heightFour = heightFour + 8;
       var temp = heightFour.toString();
       $blockFour.style.height = temp + 'px';
-      circleDimFour = circleDimFour + 2;
-      var temp1 = circleDimFour.toString();
-      $circleFour.style.height = temp1 + 'px';
-      $circleFour.style.width = temp1 + 'px';
+      if (circleDimFour <= 300) {
+        circleDimFour = circleDimFour + 5;
+        var temp1 = circleDimFour.toString();
+        $circleFour.style.height = temp1 + 'px';
+        $circleFour.style.width = temp1 + 'px';
+      }
     }
   }
 }
