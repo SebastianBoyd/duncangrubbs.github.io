@@ -14,15 +14,25 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/style.css">
 
+    <!-- IMPORTANT -->
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <!-- IMPORTS -->
+    <link rel="import" href="elements.html">
+
     <!-- Favicons -->
     <link rel="icon" href="res/favicon.png">
     <link rel="shortcut icon" href="res/favicon.png">
   </head>
 
   <body>
-    <div id="name">
-      Duncan Grubbs
-    </div>
+    <paper-toolbar>
+      <paper-icon-button icon="menu" onclick="drawer()"></paper-icon-button>
+      <div class="title">Duncan Grubbs</div>
+    </paper-toolbar>
+    
+    <side-nav></side-nav>
+
   </body>
 
   <script type="text/javascript" src="scripts/script.js"></script>
