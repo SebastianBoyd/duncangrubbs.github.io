@@ -2,43 +2,17 @@
 <html>
 
   <head>
-    <!-- Meta information -->
     <meta charset="utf-8">
-    <meta name="Inverse">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#80CBC4">
+    <title>App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="http://2.bp.blogspot.com/-NA3xtwd8W-Q/TwyPxdQAm0I/AAAAAAAAAzA/jdjn-Y1oinI/s1600/favicon.png">
 
-    <!-- Title -->
-    <title>Duncan Grubbs</title>
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/style.css">
-
-    <!-- IMPORTANT -->
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-
-    <!-- IMPORTS -->
-    <link rel="import" href="elements.html">
-
-    <!-- Favicons -->
-    <link rel="icon" href="res/favicon.png">
-    <link rel="shortcut icon" href="res/favicon.png">
   </head>
 
   <body>
-    <paper-toolbar>
-      <paper-icon-button icon="menu" onclick="drawer()"></paper-icon-button>
-      <div class="title">Duncan Grubbs</div>
-    </paper-toolbar>
+    <div id="main">You are<div onclick="linkClicked()" id="adjective"></div></div>
 
-    <div id="nav">
-      <div id="home"><a href="#/home">Home</a></div>
-      <div id="about"><a href="#/home">About</a></div>
-      <div id="contact"><a href="#/home">Contact</a></div>
-    </div>
-
+    <script src="app.js"></script>
   </body>
-
-  <script type="text/javascript" src="scripts/script.js"></script>
 
 </html>
