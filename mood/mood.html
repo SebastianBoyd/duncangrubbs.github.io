@@ -1,0 +1,72 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#000">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <meta name="application-name" content="Mood Finder">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Mood Finder">
+
+    <meta name="msapplication-TileImage" content="./res/favicon.png">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <meta name="description" content="A mood finder made by Duncan Grubbs">
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="./res/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <title>Mood Finder</title>
+    <link rel="canonical" href="https://duncangrbbs.github.io" />
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+      html, body{
+        margin: 0;
+        padding: 0;
+        font-size: 9vh;
+        font-family: 'Roboto', sans-serif;
+        opacity: 1.0;
+        -webkit-transition: background .2s linear;
+        -moz-transition: background .2s linear;
+        -o-transition: background .2s linear;
+        -ms-transition: background .2s linear;
+        transition: background .2s linear;
+      }
+      #main{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+      }
+      #adjective{
+        background: white;
+        border-radius: 5px;
+        padding: 8px;
+        color: black;
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      }
+      #adjective:hover{
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">You are<div onclick="linkClicked()" id="adjective"></div></div>
+    <script src="app.js"></script>
+  </body>
+</html>
