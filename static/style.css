@@ -1,0 +1,30 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  height: 100vh;
+}
+#nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 8px;
+  width: 100%;
+  height: 64px;
+  font-size: 24px;
+  background: #009688;
+  color: #FFF;
+}
+#loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 72px;
+}
+#logo {
+  width: 60px;
+  height: 60px;
+}
+#map {
+  height: 95vh;
+}
