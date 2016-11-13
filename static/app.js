@@ -1,20 +1,22 @@
 'use strict';
 
+//declare constants
 const $loading = document.getElementById('loading');
-let date = new Date();
-let startTime = (date.getFullYear() - 9) + '-' + date.getMonth() + '-' + date.getDay();
-let endTime = date.getFullYear() + '-' + (date.getMonth()) + '-' + date.getDay();
+const currentDate = new Date();
+const startTime = (currentDate.getFullYear() - 9) + '-' + currentDate.getMonth() + '-' + currentDate.getDay();
+const endTime = currentDate.getFullYear() + '-' + (currentDate.getMonth()) + '-' + currentDate.getDay();
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js', {scope: '/'})
   .then(registration => {
     console.log('Servive Worked Registered');
   })
-  .catch(e => {
-    console.warn('Error', e);
+  .catch(err => {
+    console.warn('Error', err);
   })
 }
 
+//Check if browser supports geolocation, get location if it does
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(position => {
     let lat = position.coords.latitude;
@@ -23,10 +25,10 @@ if ("geolocation" in navigator) {
     getData(location);
   });
 
+  //Get earthquake data using fetch
   function getData(location) {
     let url = "http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&maxradius=10&minmagnitude=3.5";
     let finalURL = `${url}&latitude=${location.lat}&longitude=${location.long}&starttime=${startTime}&endtime=${endTime}`;
-    console.log(finalURL);
 
     fetch(finalURL, { method: 'GET'})
       .then(resp => {
@@ -41,6 +43,7 @@ if ("geolocation" in navigator) {
       })
   }
 
+  //Create the map with the google maps api
   function createMap(data, lat, long) {
     $loading.style.display = 'none';
     const $map = document.getElementById('map');
@@ -52,12 +55,16 @@ if ("geolocation" in navigator) {
       center: myLatLng
     });
 
+    let coords;
+    let formattedDate;
+    let status;
+
     for (let i = 0; i < data.features.length; i++) {
-      let coords = {lat: data.features[i].geometry.coordinates[1], lng: data.features[i].geometry.coordinates[0]};
-      let date = timeConverter(data.features[i].properties.time);
-      let status = data.features[i].properties.status;
+      coords = {lat: data.features[i].geometry.coordinates[1], lng: data.features[i].geometry.coordinates[0]};
+      formattedDate = timeConverter(data.features[i].properties.time);
+      status = data.features[i].properties.status;
       let infowindow = new google.maps.InfoWindow({
-        content: `Date: ${date}<br>Status: ${status}`
+        content: `Date: ${formattedDate}<br>Status: ${status}`
       });
       let circle = new google.maps.Circle({
         strokeColor: '#F44336',
@@ -78,15 +85,15 @@ if ("geolocation" in navigator) {
   alert('Your browser does not support geolocation :(');
 }
 
+//Function to convert any js date into a well formatted one
 function timeConverter(time){
-  let a = new Date(time);
+  let dateToConvert = new Date(time);
   let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  let year = a.getFullYear();
-  let month = months[a.getMonth()];
-  let date = a.getDate();
-  let hour = a.getHours();
-  let min = a.getMinutes();
-  let sec = a.getSeconds();
-  let finalDate = month + ' ' + date + ', ' + year;
-  return finalDate;
+  let year = dateToConvert.getFullYear();
+  let month = months[dateToConvert.getMonth()];
+  let date = dateToConvert.getDate();
+  let hour = dateToConvert.getHours();
+  let min = dateToConvert.getMinutes();
+  let sec = dateToConvert.getSeconds();
+  return (month + ' ' + date + ', ' + year);
 }
