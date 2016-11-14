@@ -1,15 +1,16 @@
 'use strict';
 
 //declare constants
-const $loading = document.getElementById('loading');
+const $gradient = document.getElementById('gradient');
+const $map = document.getElementById('map');
 const currentDate = new Date();
-const startTime = (currentDate.getFullYear() - 9) + '-' + currentDate.getMonth() + '-' + currentDate.getDay();
+const startTime = (currentDate.getFullYear() - 10) + '-' + currentDate.getMonth() + '-' + currentDate.getDay();
 const endTime = currentDate.getFullYear() + '-' + (currentDate.getMonth()) + '-' + currentDate.getDay();
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js', {scope: '/'})
   .then(registration => {
-    console.log('Servive Worked Registered');
+    console.log('Service Worked Registered');
   })
   .catch(err => {
     console.warn('Error', err);
@@ -33,7 +34,6 @@ if ("geolocation" in navigator) {
     fetch(finalURL, { method: 'GET'})
       .then(resp => {
         resp.json().then(data => {
-          localStorage.setItem('data', JSON.stringify(data));
           let earthquakeData = data;
           createMap(earthquakeData, location.lat, location.long);
         })
@@ -45,9 +45,6 @@ if ("geolocation" in navigator) {
 
   //Create the map with the google maps api
   function createMap(data, lat, long) {
-    $loading.style.display = 'none';
-    const $map = document.getElementById('map');
-
     let myLatLng = {lat: lat, lng: long};
 
     let map = new google.maps.Map($map, {
