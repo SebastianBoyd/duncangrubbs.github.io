@@ -1,5 +1,9 @@
 'use strict';
 
+if(!navigator.onLine){
+  location.href = '/offline.html';
+}
+
 //declare constants
 const $gradient = document.getElementById('gradient');
 const $map = document.getElementById('map');
@@ -35,7 +39,7 @@ function query() {
       let long = position.coords.longitude;
       const startTime = (currentDate.getFullYear() - years) + '-' + currentDate.getMonth() + '-' + currentDate.getDay();
       const endTime = currentDate.getFullYear() + '-' + (currentDate.getMonth()) + '-' + currentDate.getDay();
-      let url = "http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&";
+      let url = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&";
       let finalURL = `${url}maxradius=${radius}&minmagnitude=${mag}&latitude=${lat}&longitude=${long}&starttime=${startTime}&endtime=${endTime}`;
 
       fetch(finalURL, { method: 'GET'})

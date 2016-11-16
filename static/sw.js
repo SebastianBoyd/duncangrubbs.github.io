@@ -16,10 +16,12 @@ const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
-  'index.html',
-  './',
-  '/static/style.css',
-  '/static/app.js'
+  './offline.html',
+  './index.html',
+  './res/favicon.png',
+  './style.css',
+  './app.js',
+  'https://fonts.googleapis.com/css?family=Roboto'
 ];
 
 self.addEventListener('install', event => {
@@ -46,12 +48,15 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   // Skip cross-origin requests, like those for Google Analytics.
+
   if (event.request.url.startsWith(self.location.origin)) {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
-        if (cachedResponse) {
+        if(cachedResponse) {
+          console.log('[SW] Found in Cache', cachedResponse);
           return cachedResponse;
         }
+        return fetch(event.request);
 
         return caches.open(RUNTIME).then(cache => {
           return fetch(event.request).then(response => {
