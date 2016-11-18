@@ -1,0 +1,23 @@
+{
+  "name": "duncangrubbs.github.io",
+  "version": "1.0.0",
+  "description": "An Earthquake Visualizer",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duncangrubbs/duncangrubbs.github.io.git"
+  },
+  "author": "Duncan Grubbs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duncangrubbs/duncangrubbs.github.io/issues"
+  },
+  "homepage": "https://github.com/duncangrubbs/duncangrubbs.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  }
+}

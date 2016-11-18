@@ -1,6 +1,6 @@
 duncangrubbs.github.io
 -------------------------------
-Duncan Grubbs' Personal Website
+An Earthquake Visualizer Made by Duncan Grubbs
 -------------------------------
 
 *Look at issues for current problems.*
@@ -8,5 +8,6 @@ Duncan Grubbs' Personal Website
 If you want to edit the site, feel free to fork and make a pull request when
 your code is stable.
 
-The code is made using `HTML, CSS, and Javascript`. I also used the `Bootstrap CSS` library
-and the `JQUERY Javascript` library.
+The website is made using `HTML, CSS, and Javascript` and follows modern web standards.
+It uses the ES6 Javascript standard as well as the `fetch API`, the `Google Maps API`,
+and the `service worker API`.
