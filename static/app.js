@@ -2,61 +2,71 @@
 
 if(!navigator.onLine){
   location.href = '/offline.html';
-}
+};
 
-//declare constants
+if (!window.indexedDB) {
+  console.log('Your browser does not support indexedDB');
+};
+
+//Declare Constants
 const $gradient = document.getElementById('gradient');
 const $map = document.getElementById('map');
 const $mag = document.getElementById('mag');
 const $radius = document.getElementById('radius');
 const $years = document.getElementById('years');
 const $query = document.getElementById('query');
+const $loading = document.getElementById('loading');
 const currentDate = new Date();
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js', {scope: '/'})
   .then(registration => {
-    console.log('Service Worked Registered');
+    console.log('[SW] Registered');
   })
   .catch(err => {
     console.warn('Error', err);
   })
-}
+};
 
 $query.addEventListener('click', function() {
-  query();
+  getLocation();
+  $loading.style.display = 'flex';
 });
 
-function query() {
-  console.log('Query');
-  let mag = $mag.value;
-  let years = $years.value;
-  let radius = $radius.value;
-  //Check if browser supports geolocation, get location if it does
+function getLocation() {
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(position => {
       let lat = position.coords.latitude;
       let long = position.coords.longitude;
-      const startTime = (currentDate.getFullYear() - years) + '-' + currentDate.getMonth() + '-' + currentDate.getDay();
-      const endTime = currentDate.getFullYear() + '-' + (currentDate.getMonth()) + '-' + currentDate.getDay();
-      let url = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&";
-      let finalURL = `${url}maxradius=${radius}&minmagnitude=${mag}&latitude=${lat}&longitude=${long}&starttime=${startTime}&endtime=${endTime}`;
-
-      fetch(finalURL, { method: 'GET'})
-        .then(resp => {
-          resp.json().then(data => {
-            let earthquakeData = data;
-            createMap(earthquakeData, lat, long, radius);
-          })
-        })
-        .catch(err => {
-          console.warn('Fetch error: ', err);
-        })
+      query(lat, long)
     });
   } else {
     alert('Your browser does not support geolocation :(');
   }
 }
+
+function query(lat, long) {
+  console.log('[APP] Querying');
+  let mag = $mag.value;
+  let years = $years.value;
+  let radius = $radius.value;
+
+  const startTime = (currentDate.getFullYear() - years) + '-' + currentDate.getMonth() + '-' + currentDate.getDay();
+  const endTime = currentDate.getFullYear() + '-' + (currentDate.getMonth()) + '-' + currentDate.getDay();
+  let url = "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&";
+  let finalURL = `${url}maxradius=${radius}&minmagnitude=${mag}&latitude=${lat}&longitude=${long}&starttime=${startTime}&endtime=${endTime}`;
+
+  fetch(finalURL, { method: 'GET'})
+    .then(resp => {
+      resp.json().then(data => {
+        let earthquakeData = data;
+        createMap(earthquakeData, lat, long, radius);
+      })
+    })
+    .catch(err => {
+      console.warn('Fetch error: ', err);
+    })
+};
 
 //Create the map with the google maps api
 function createMap(data, lat, long, radius) {
@@ -80,6 +90,8 @@ function createMap(data, lat, long, radius) {
   let status;
   let mag;
 
+  $loading.style.display = 'none';
+
   for (let i = 0; i < data.features.length; i++) {
     coords = {lat: data.features[i].geometry.coordinates[1], lng: data.features[i].geometry.coordinates[0]};
     formattedDate = timeConverter(data.features[i].properties.time);
@@ -100,7 +112,6 @@ function createMap(data, lat, long, radius) {
     });
     circle.addListener('click', function() {
       infowindow.open(map, circle);
-      console.log(circle);
       infowindow.setPosition(coords);
     });
   }
@@ -117,4 +128,4 @@ function timeConverter(time) {
   let min = dateToConvert.getMinutes();
   let sec = dateToConvert.getSeconds();
   return (month + ' ' + date + ', ' + year);
-}
+};

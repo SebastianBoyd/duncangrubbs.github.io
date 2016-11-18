@@ -19,6 +19,8 @@ const PRECACHE_URLS = [
   './offline.html',
   './index.html',
   './res/favicon.png',
+  './res/search.png',
+  './res/loading.gif',
   './style.css',
   './app.js',
   'https://fonts.googleapis.com/css?family=Roboto'
@@ -53,7 +55,6 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       caches.match(event.request).then(cachedResponse => {
         if(cachedResponse) {
-          console.log('[SW] Found in Cache', cachedResponse);
           return cachedResponse;
         }
         return fetch(event.request);
