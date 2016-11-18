@@ -46,7 +46,7 @@ function query() {
         .then(resp => {
           resp.json().then(data => {
             let earthquakeData = data;
-            createMap(earthquakeData, lat, long);
+            createMap(earthquakeData, lat, long, radius);
           })
         })
         .catch(err => {
@@ -59,24 +59,34 @@ function query() {
 }
 
 //Create the map with the google maps api
-function createMap(data, lat, long) {
+function createMap(data, lat, long, radius) {
   let myLatLng = {lat: lat, lng: long};
-
+  let rad;
+  let tempRad = parseInt(radius);
+  if(tempRad / 2 > 30){
+    rad = 4;
+  } else if(tempRad / 2 > 10) {
+    rad = 6;
+  } else {
+    rad = 7;
+  }
   let map = new google.maps.Map($map, {
-    zoom: 8,
+    zoom: rad,
     center: myLatLng
   });
 
   let coords;
   let formattedDate;
   let status;
+  let mag;
 
   for (let i = 0; i < data.features.length; i++) {
     coords = {lat: data.features[i].geometry.coordinates[1], lng: data.features[i].geometry.coordinates[0]};
     formattedDate = timeConverter(data.features[i].properties.time);
     status = data.features[i].properties.status;
+    mag = data.features[i].properties.mag;
     let infowindow = new google.maps.InfoWindow({
-      content: `Date: ${formattedDate}<br>Status: ${status}`
+      content: `Date: ${formattedDate}<br>Status: ${status}<br>Magnitude: ${mag}`
     });
     let circle = new google.maps.Circle({
       strokeColor: '#F44336',
@@ -86,10 +96,12 @@ function createMap(data, lat, long) {
       fillOpacity: 0.35,
       map: map,
       center: coords,
-      radius: data.features[i].properties.mag * 1000
+      radius: 4 ** data.features[i].properties.mag
     });
     circle.addListener('click', function() {
       infowindow.open(map, circle);
+      console.log(circle);
+      infowindow.setPosition(coords);
     });
   }
 };
