@@ -93,6 +93,10 @@ function createMap(data, lat, long, radius) {
   $loading.style.display = 'none';
 
   for (let i = 0; i < data.features.length; i++) {
+    addCircle(i);
+  }
+
+  function addCircle(i) {
     coords = {lat: data.features[i].geometry.coordinates[1], lng: data.features[i].geometry.coordinates[0]};
     formattedDate = timeConverter(data.features[i].properties.time);
     status = data.features[i].properties.status;
@@ -108,11 +112,12 @@ function createMap(data, lat, long, radius) {
       fillOpacity: 0.35,
       map: map,
       center: coords,
+      position: new google.maps.LatLng(data.features[i].geometry.coordinates[1], data.features[i].geometry.coordinates[0]),
       radius: 4 ** data.features[i].properties.mag
     });
     circle.addListener('click', function() {
-      infowindow.open(map, circle);
       infowindow.setPosition(coords);
+      infowindow.open(map, circle);
     });
   }
 };
