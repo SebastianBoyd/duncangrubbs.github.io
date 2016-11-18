@@ -111,8 +111,8 @@ function createMap(data, lat, long, radius) {
       radius: 4 ** data.features[i].properties.mag
     });
     circle.addListener('click', function() {
-      infowindow.open(map, circle);
       infowindow.setPosition(coords);
+      infowindow.open(map, circle);
     });
   }
 };
